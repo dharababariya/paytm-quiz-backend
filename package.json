@@ -1,0 +1,32 @@
+{
+  "name": "pytm-quiz-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.4",
+    "debug": "4.1.1",
+    "dotenv": "^7.0.0",
+    "express": "4.16.4",
+    "http-errors": "1.7.2",
+    "joi": "14.3.1",
+    "knex": "0.16.5",
+    "morgan": "1.9.1",
+    "nodemon": "1.18.11",
+    "pg": "7.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharababariya/pytm-quiz-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dharababariya/pytm-quiz-backend/issues"
+  },
+  "homepage": "https://github.com/dharababariya/pytm-quiz-backend#readme"
+}
