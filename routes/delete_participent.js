@@ -5,7 +5,6 @@ const router = express.Router();
 
 const knex = require('../db/knex');
 
-// delete contact
 const delete_participent  = async(req, res, next) => {
 
     try {
@@ -23,7 +22,7 @@ const delete_participent  = async(req, res, next) => {
 
 }
 
-//delete contact list api
+
 router.delete('/api/delete_participent', delete_participent);
 
 module.exports = router;

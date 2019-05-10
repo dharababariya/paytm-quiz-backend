@@ -15,6 +15,9 @@ dotenv.config();
 
 app.use('/v1',require('./routes/add_participent'));
 app.use('/v1',require('./routes/delete_participent'));
+app.use('/v1',require('./routes/get_participent'));
+app.use('/v1',require('./routes/update_pariticipent'));
+
 
 
 //Create server
