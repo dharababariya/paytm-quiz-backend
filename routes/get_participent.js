@@ -13,7 +13,7 @@ const get_participent = async(req, res, next) => {
 
         res
             .status(200)
-            .send({message: "get all participent"})
+            .send({message: "get all participent", result})
 
     } catch (error) {
         console.error(error)
