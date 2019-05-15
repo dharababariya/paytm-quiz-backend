@@ -11,7 +11,7 @@ const update_participent = async(req, res, next) => {
         const result = await knex("public.participent")
             .update({
                 score: req.body.score,
-                timespent:req.body.timespent
+                timespent: req.body.timespent
         })
             .where("participantID", "=", req.body.participantID)
             .returning("*")

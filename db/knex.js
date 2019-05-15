@@ -1,6 +1,19 @@
-const config = require('../knexfile');
 
-const knex = require('knex')(config[process.env.NODE_ENV]);
+
+const knex = require('knex')({
+
+    client: 'postgresql',
+    connection: process.env.DATABASE_URL,
+    pool: {
+      min: 2,
+      max: 10
+    },
+    ssl : true,
+    debug: false
+  
+
+  })
+
 
 //expose knex connection object;
 module.exports = knex;

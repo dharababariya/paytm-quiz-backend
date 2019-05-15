@@ -41,7 +41,7 @@ const add_participent = async (req, res, next) => {
                     .json({
                         status: 'error', 
                         message: 'Enter valid name & email',
-                        data: data});
+                        });
             } else {
                 // send a success response if validation passes
                 // console.log(JSON.stringify(req.body));
@@ -53,6 +53,7 @@ const add_participent = async (req, res, next) => {
                 res.json({
                     status: 'success',
                     message: 'successfully added new participent',
+                    
                     
                 });
 
