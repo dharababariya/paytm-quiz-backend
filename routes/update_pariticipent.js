@@ -9,10 +9,7 @@ const update_participent = async(req, res, next) => {
     try {
 
         const result = await knex("public.participent")
-            .update({
-                score: req.body.score,
-                timespent: req.body.timespent
-        })
+            .update({score: req.body.score, timespent: req.body.timespent})
             .where("participantID", "=", req.body.participantID)
             .returning("*")
 
@@ -31,3 +28,7 @@ const update_participent = async(req, res, next) => {
 
 router.put('/api/update_participent', update_participent);
 module.exports = router;
+
+
+
+

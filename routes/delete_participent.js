@@ -5,7 +5,7 @@ const router = express.Router();
 
 const knex = require('../db/knex');
 
-const delete_participent  = async(req, res, next) => {
+const delete_participent = async(req, res, next) => {
 
     try {
         const result = await knex("public.participent")
@@ -21,7 +21,6 @@ const delete_participent  = async(req, res, next) => {
     }
 
 }
-
 
 router.delete('/api/delete_participent', delete_participent);
 

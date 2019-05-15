@@ -5,9 +5,8 @@ const router = express.Router();
 const knex = require('../db/knex');
 const Joi = require('joi');
 
-const add_participent = async (req, res, next) => {
-    
-    
+const add_participent = async(req, res, next) => {
+
     try {
 
         const data = req.body
@@ -27,8 +26,7 @@ const add_participent = async (req, res, next) => {
                 email: Joi
                     .string()
                     .email()
-                    .required(),
-               
+                    .required()
             });
 
         Joi.validate(data, schema, async(err, value) => {
@@ -38,24 +36,13 @@ const add_participent = async (req, res, next) => {
                 // send a 422 error response if validation fails
                 res
                     .status(422)
-                    .json({
-                        status: 'error', 
-                        message: 'Enter valid name & email',
-                        });
+                    .json({status: 'error', message: 'Enter valid name & email'});
             } else {
                 // send a success response if validation passes
                 // console.log(JSON.stringify(req.body));
 
-                const result = await knex("public.participent").insert({
-                     name: req.body.name,
-                     email: req.body.email, 
-                     });
-                res.json({
-                    status: 'success',
-                    message: 'successfully added new participent',
-                    
-                    
-                });
+                const result = await knex("public.participent").insert({name: req.body.name, email: req.body.email});
+                res.json({status: 'success', message: 'successfully added new participent'});
 
             }
 
@@ -67,7 +54,6 @@ const add_participent = async (req, res, next) => {
     }
 
 }
-
 
 router.post('/api/add_participent', add_participent);
 
