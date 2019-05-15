@@ -16,9 +16,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const body_parser = require('body-parser');
 
+
 //middleware
 app.use(body_parser.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+  
 // routes
 app.use('/v1',require('./routes/add_participent'));
 
