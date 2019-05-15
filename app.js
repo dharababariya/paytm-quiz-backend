@@ -21,9 +21,18 @@ app.use(body_parser.json());
 
 // routes
 app.use('/v1',require('./routes/add_participent'));
+
 app.use('/v1',require('./routes/delete_participent'));
+
 app.use('/v1',require('./routes/get_participent'));
+
 app.use('/v1',require('./routes/update_pariticipent'));
+
+app.use('/v1', require('./routes/get_question'));
+
+app.use('/v1', require('./routes/add_question'));
+
+
 
  // catch 404 and forward to error
 // handler
