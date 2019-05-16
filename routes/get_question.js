@@ -8,7 +8,7 @@ const knex = require('../db/knex');
 const get_question = async(req, res, next) => {
     try {
 
-        const result = await knex("public.question").select("*").orderBy.random(10).LIMIT(13);
+        const result = await knex("public.question").select("*")
         // console.log(result);
 
         res
