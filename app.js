@@ -39,6 +39,8 @@ app.use('/v1', require('./routes/get_question'));
 
 app.use('/v1', require('./routes/add_question'));
 
+app.use('/v1', require('./routes/get_answer'));
+
 
 
  // catch 404 and forward to error
